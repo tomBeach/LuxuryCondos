@@ -1,0 +1,83 @@
+/* ======= general ======= */
+body {
+    /* Specify that <div> elements should have padding and border included in the element's total width and height */
+    box-sizing: border-box;
+    font-family: "Ariel", sans-serif;
+}
+
+/* ======= center ======= */
+#page-wrap {
+     width: 700px;
+     margin: 0 auto;
+     background-color: #eee;
+     overflow-x: auto;
+}
+
+/* ======= containers ======= */
+#header, #footer, #content {
+    width: 100%;
+    height: 60px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: ghostwhite;
+}
+#content {
+    height: 300px;
+    padding: 40px 0;
+}
+
+/* ======= generated ======= */
+#condo {
+    position: relative;
+    margin: 20px auto;
+    width: 372px;
+    height: 184px;
+    background-color: #eee;
+    border: solid 2px red;
+}
+#heightBar {
+    position: relative;
+    float: left;
+    margin-top: 20px;
+    margin-left: 140px;
+    width: 4px;
+    height: 184px;
+    background-color: blue;
+}
+#heightBar > p {
+    position: relative;
+    top: 40%;
+    left: -25px;
+}
+#widthBar {
+    position: relative;
+    width: 372px;
+    height: 4px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: blue;
+}
+#widthBar > p {
+    position: relative;
+    top:10px;
+}
+.room {
+    position: relative;
+    float: left;
+    width: 60px;
+    height: 60px;
+    background-color: #ddd;
+    border: solid 2px brown;
+}
+.room-label {
+    margin: 5px;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: red;
+}
+.size-label {
+    float: left;
+    margin: 0 10px;
+    font-size: 10px;
+    color: blue;
+}
