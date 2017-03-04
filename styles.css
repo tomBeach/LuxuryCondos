@@ -22,11 +22,49 @@ body {
     background-color: ghostwhite;
 }
 #content {
-    height: 300px;
+    height: 260px;
     padding: 40px 0;
 }
+#footer {
+    height: 200px;
+}
 
-/* ======= generated ======= */
+/* ======= form ======= */
+#roomsForm {
+    float: left;
+    width: 240px;
+    margin: 20px;
+}
+#width {
+    width: 20px;
+}
+#height {
+    width: 20px;
+}
+#roomsTable, th, td {
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#roomsTable {
+    float: right;
+    width: 320px;
+    margin: 10px;
+    margin-right: 80px;
+}
+#roomsTable, th {
+    height: 30px;
+    font-size: 12px;
+    background-color: #eee;
+}
+#roomN, #roomV {
+    width: 120px;
+}
+#roomW, #roomH {
+    width: 40px;
+}
+
+/* ======= condo divs ======= */
 #condo {
     position: relative;
     margin: 20px auto;

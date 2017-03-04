@@ -29,9 +29,26 @@
 
 			<!-- == footer == -->
 			<div id="footer">
-				<p>footer</p>
+				<form id="roomsForm" action="#">
+					<select id="room">
+						<option value="livingRoom">livingRoom</option>
+						<option value="kitchen">kitchen</option>
+						<option value="bathroom">bathroom</option>
+						<option value="bedroom">bedroom</option>
+					</select>
+					<input id="width" type="text" class="text" name="width">
+					<input id="height" type="text" class="text" name="height">
+					<button id="saveBtn" type="button" name="saveRoom">Save Room</button>
+				</form>
+				<table id="roomsTable">
+					<tr>
+						<th id="roomN">room</th>
+						<th id="roomW">W</th>
+						<th id="roomH">H</th>
+						<th id="roomV">valid</th>
+					</tr>
+				</table>
 			</div>
-
 		</div>
 
 		<!-- == scripts == -->

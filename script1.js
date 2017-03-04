@@ -11,46 +11,12 @@ var rooms = {
 var myCondo = {
     rooms: rooms,
     roomKeys: Object.keys(this.rooms),
-    customRooms: {},
     initialize: function() {
         console.log("== initialize ==");
         myCondo.makeRooms();
         myCondo.nameRooms();
         myCondo.sizeRooms();
-        myCondo.activateForm();
-    },
-    validateRoom: function(room, roomW, roomH) {
-        console.log("== validateRoom ==");
-        console.log("room: ", room);
-        var condoW = $('#condo').width();
-        var condoH = $('#condo').height();
-        switch(room) {
-            case "livingRoom":
-            if (roomW > (condoW/10)/2) {
-                roomW = (condoW/10)/2
-            }
-            console.log("roomW: ", roomW);
-            break;
-            case "kitchen":
-            // code block
-            break;
-            default:
-            // code block
-        }
-        var tableRow = "<tr><td>" + room + "</td><td>" + roomW + "</td><td>" + roomH + "</td><td></td></tr>"
-        var table = $('#roomsTable').append(tableRow);
-    },
-    saveRoom: function(e) {
-        console.log("== saveRoom ==");
-        var room = $('#room').find(":selected").text();
-        var roomW = $('#width').val();
-        var roomH = $('#height').val();
-        myCondo.validateRoom(room, roomW, roomH);
-        myCondo.customRooms[room] = {};
-    },
-    activateForm: function() {
-        console.log("== activateForm ==");
-        $('#saveBtn').on('click', myCondo.saveRoom);
+        myCondo.customize();
     },
     makeRooms: function() {
         console.log("== makeRooms ==");
@@ -98,6 +64,13 @@ var myCondo = {
             nextSizeEl.className = "size-label";
             nextRoomEl.appendChild(nextSizeEl);
         });
+    },
+    customize: function() {
+        console.log("== customize ==");
+        var condoW = $('#condo').width();
+        var condoH = $('#condo').height();
+        console.log("condoW: ", condoW);
+        console.log("condoH: ", condoH);
     }
 };
 
