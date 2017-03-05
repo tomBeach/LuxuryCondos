@@ -21,8 +21,15 @@ if (nextXYWH.H > LRmaxH) {
     nextXYWH.H = LRminH
 }
 
+nextXYWH.W > LRmaxW
+    ? nextXYWH.W = LRmaxW
+    : expr2
 
-
-
-
-sdf
+var roomSizes = {
+    condo: { W:360, H:180 },
+    livingRoom: { maxW:this.condo.W/2, minW:this.condo.W/3, maxH:this.condo.W, minH:this.condo.W/3 },
+    kitchen: {  maxW:120, H:120 },
+    bathroom: { maxW:120, H:60 },
+    bedroom: { maxW:120, H:180 }
+}
+console.dir(roomSizes);

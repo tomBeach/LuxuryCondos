@@ -26,54 +26,19 @@ body {
     padding: 40px 0;
 }
 #footer {
-    height: 200px;
-}
-
-/* ======= form ======= */
-#roomsForm {
-    float: left;
-    width: 240px;
-    margin: 20px;
-}
-#width {
-    width: 20px;
-}
-#height {
-    width: 20px;
-}
-#roomsTable, th, td {
-    text-align: center;
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-#roomsTable {
-    float: right;
-    width: 320px;
-    margin: 10px;
-    margin-right: 80px;
-}
-#roomsTable, th {
-    height: 30px;
-    font-size: 12px;
-    background-color: #eee;
-}
-#roomN, #roomV {
-    width: 120px;
-}
-#roomW, #roomH {
-    width: 40px;
+    height: 160px;
 }
 
 /* ======= condo divs ======= */
 #condo {
     position: relative;
     margin: 20px auto;
-    width: 372px;
-    height: 184px;
+    width: 360px;
+    height: 180px;
     background-color: #eee;
-    border: solid 2px red;
 }
 #heightBar {
+    visibility: hidden;
     position: relative;
     float: left;
     margin-top: 20px;
@@ -88,6 +53,7 @@ body {
     left: -25px;
 }
 #widthBar {
+    visibility: hidden;
     position: relative;
     width: 372px;
     height: 4px;
@@ -105,7 +71,7 @@ body {
     width: 60px;
     height: 60px;
     background-color: #ddd;
-    border: solid 2px brown;
+    border: solid 4px brown;
 }
 .room-label {
     margin: 5px;
@@ -118,4 +84,41 @@ body {
     margin: 0 10px;
     font-size: 10px;
     color: blue;
+}
+
+/* ======= form ======= */
+#roomsForm {
+    visibility: hidden;
+    float: left;
+    width: 240px;
+    margin: 20px;
+}
+#width {
+    width: 20px;
+}
+#height {
+    width: 20px;
+}
+#roomsTable, th, td {
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#roomsTable {
+    visibility: hidden;
+    float: right;
+    width: 320px;
+    margin: 10px;
+    margin-right: 80px;
+}
+#roomsTable, th {
+    height: 30px;
+    font-size: 12px;
+    background-color: #eee;
+}
+#roomN, #roomV {
+    width: 120px;
+}
+#roomW, #roomH {
+    width: 40px;
 }
