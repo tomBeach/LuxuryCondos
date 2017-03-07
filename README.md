@@ -15,24 +15,17 @@ Luxury Condos
 == setup
 
     github: https://github.com/tomBeach?tab=repositories
-
     fork-and-clone to local computer, use "customize" branch
-
     files: script.js (code-along), script_demo.js (copy-paste)
-
     comment/uncomment script tag in index.html file
 
 
 == concepts and tools
 
     jquery vs javascript
-
     plugins/widgets vs roll-your-own
-
     page mark-up (interaction with DOM)
-
     logical programatic flow (separation of concerns)
-
     hard-wired vs customized (developing an algorithm)
 
 
