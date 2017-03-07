@@ -36,6 +36,12 @@ body {
     background-color: thistle;
     box-shadow: 2px 2px 2px #555;
 }
+.couch {
+    border-radius: 10px 10px 4px 4px;
+    border: 2px solid indianred;
+    background-color: darksalmon;
+    box-shadow: 2px 2px 2px #555;
+}
 
 /* ======= condo divs ======= */
 #condo {
