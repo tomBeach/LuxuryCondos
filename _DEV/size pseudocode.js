@@ -1,3 +1,42 @@
+
+chair1 = new Item(
+    /* itemEl */ null,
+    /* itemName */ "chair1",
+    /* itemText */ "Chair",
+    /* itemMove */ "dragger",
+    /* itemImage */ "chair1",
+    /* startXY */ { itemL:0, itemT:0, mouseX:0, mouseY:0, diffX:0, diffY:0, dragL:0, dragT:0 },
+    /* minMaxLT */ { minL:0, minT:0, maxL:0, maxT:0 },
+    /* dropLTWH */ { L:0, T:0, W:0, H:0 },
+    /* initLTWH */ { L:0, T:0, W:100, H:100 },
+    /* bounds */ { L:0, T:0, W:condoW, H:condoH }      // relative
+);
+
+
+activatePageItems
+
+$('#' + item.itemId).on('mousedown', function(e) {
+    console.log("\nmousedown");
+    var actor = clientApp.items[$(e.currentTarget).attr('id')];
+    var actorEl = $(e.currentTarget);
+    e.preventDefault();
+    clientApp.activeActor = actor;
+    actor.initMove(e, actorEl, actor);
+
+
+initMove
+window.addEventListener('mousemove', actor.moveItem, true);
+window.addEventListener('mouseup', actor.mouseUp, true);
+
+moveItem
+checkItemTargets
+updateItemLoc
+getMoveBoundaries
+mouseUp
+
+
+
+
 condo sizing algorithm
 
 get condo size

@@ -30,6 +30,14 @@ body {
 }
 
 /* ======= condo divs ======= */
+.chair {
+    border-radius: 10px 10px 4px 4px;
+    border: 2px solid purple;
+    background-color: thistle;
+    box-shadow: 2px 2px 2px #555;
+}
+
+/* ======= condo divs ======= */
 #condo {
     position: relative;
     margin: 20px auto;

@@ -17,6 +17,7 @@
 //     github: https://github.com/tomBeach?tab=repositories
 //     fork-and-clone to local computer
 //     files: script.js (code-along), script_demo.js (copy-paste)
+//     comment/uncomment script tag in index.html file
 //
 // // == concepts and tools
 //     jquery vs javascript
