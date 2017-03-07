@@ -14,7 +14,7 @@ Luxury Condos
 
 == setup
 
-    github: https://github.com/tomBeach?tab=repositories
+    github: https://github.com/tomBeach/LuxuryCondos/tree/customize
     fork-and-clone to local computer, use "customize" branch
     files: script.js (code-along), script_demo.js (copy-paste)
     comment/uncomment script tag in index.html file
