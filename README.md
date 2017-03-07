@@ -4,17 +4,11 @@ Luxury Condos
 == project
 
     workshop goals:
-
     • basic object syntax/usage for SPA
-
     • programmatic/dynamic DOM manipulation (vs html/css only)
-
     • add customization options (developing a layout algorithm, user selection interface)
-
     MVP goal: dynamically build condo floorplan via divs, styles, XYWH values
-
     upgrade goal: draggable/rotatable elements ("furniture")
-
     approach: hard-wired design (MVP version) then layout/algorithm discussion
 
 
