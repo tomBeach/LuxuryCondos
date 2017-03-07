@@ -22,7 +22,7 @@ saveRoom: function(e) {
 },
 activateForm: function() {
     console.log("== activateForm ==");
-    $('#saveBtn').on('click', myCondo.saveRoom);
+    $('#roomBtn').on('click', myCondo.saveRoom);
 },
 setSizeParams: function(whichCondo) {
     console.log("== setSizeParams ==");
