@@ -1,7 +1,7 @@
 Luxury Condos
 
 
-== project
+== project ==
 
     workshop goals:
     • basic object syntax/usage for SPA
@@ -12,7 +12,7 @@ Luxury Condos
     approach: hard-wired design (MVP version) then layout/algorithm discussion
 
 
-== setup
+== setup ==
 
     github: https://github.com/tomBeach/LuxuryCondos/tree/customize
     fork-and-clone to local computer, use "customize" branch
@@ -20,7 +20,7 @@ Luxury Condos
     comment/uncomment script tag in index.html file
 
 
-== concepts and tools
+== concepts and tools ==
 
     jquery vs javascript
     plugins/widgets vs roll-your-own
@@ -29,6 +29,6 @@ Luxury Condos
     hard-wired vs customized (developing an algorithm)
 
 
-== syntax heads-up
+== syntax heads-up ==
 
     special characters -- (), [], {}, ",", ";", ":"
