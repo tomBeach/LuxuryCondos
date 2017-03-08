@@ -104,7 +104,7 @@ h2 {
 
 /* ======= forms ======= */
 #itemsForm, #roomsForm {
-    visibility: hidden;
+    /*visibility: hidden;*/
     float: left;
     margin: 10px;
     width: auto;
@@ -131,7 +131,7 @@ select, button {
     margin: 10px;
 }
 #roomsTable {
-    visibility: hidden;
+    /*visibility: hidden;*/
     float: right;
     width: 300px;
     margin: 20px;
