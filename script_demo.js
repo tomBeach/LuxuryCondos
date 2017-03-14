@@ -50,8 +50,8 @@
 // ======= ======= ======= PROPERTIES ======= ======= =======
 
 // == multiple properties
-//    variable types: numbers, string, arrays, other objects
-//    syntax errors: equals vs colons, commas vs semi-colons
+   // variable types: numbers, string, arrays, other objects
+   // syntax errors: equals vs colons, commas vs semi-colons
 // var myCondo = {
 //     floor: 2,
 //     unit: "2-B",
@@ -64,7 +64,7 @@
 // ======= ======= ======= METHODS ======= ======= =======
 // ======= ======= ======= METHODS ======= ======= =======
 
-// // == methods
+// == methods
 // var myCondo = {
 //     address: "1400 U St.",
 //     floor: "2",
@@ -94,20 +94,20 @@
 // //    units: feet (must be converted to pixels for display)
 //
 // ======= default objects =======
-var condo2B = { name:"Unit 2-B", X:0, Y:0, W:36, H:18 };
-var rooms = {
-    livingRoom: { name:"Living Room", X:0, Y:0, W:12, H:18 },
-    kitchen: { name:"Kitchen", X:12, Y:0, W:12, H:12 },
-    bathroom: { name:"Bathroom", X:12, Y:12, W:12, H:6 },
-    bedroom: { name:"Bedroom", X:24, Y:0, W:12, H:18 }
-}
-console.dir(rooms);
+// var condo2B = { name:"Unit 2-B", X:0, Y:0, W:36, H:18 };
+// var rooms = {
+//     livingRoom: { name:"Living Room", X:0, Y:0, W:12, H:18 },
+//     kitchen: { name:"Kitchen", X:12, Y:0, W:12, H:12 },
+//     bathroom: { name:"Bathroom", X:12, Y:12, W:12, H:6 },
+//     bedroom: { name:"Bedroom", X:24, Y:0, W:12, H:18 }
+// }
+// console.dir(rooms);
 
 // ======= ======= ======= MAKE DIVS ======= ======= =======
 // ======= ======= ======= MAKE DIVS ======= ======= =======
 // ======= ======= ======= MAKE DIVS ======= ======= =======
 
-// // ======= myCondo =======
+// ======= myCondo =======
 // var myCondo = {
 //     address: "1400 U St.",
 //     floor: "2",
@@ -116,8 +116,6 @@ console.dir(rooms);
 //     initialize: function() {
 //         console.log("== initialize ==");
 //         myCondo.makeRooms();                                // "myCondo" vs "this"
-//         console.log("this: ", this);                        // reference to the instance "myCondo"
-//         console.log("myCondo: ", myCondo);
 //     },
 //     makeRooms: function() {
 //         console.log("== makeRooms ==");
