@@ -34,10 +34,13 @@
 //
 // // == methodology concepts
 //     jquery vs javascript
+//          javascript first
+//          $.each ($ = jquery)
+//          both
 //     plugins/widgets vs roll-your-own
 //     page mark-up (interaction with DOM)
 //     logical programatic flow (separation of concerns)
-//
+// 
 // // == syntax heads-up
 //     special characters -- ()  []  {}  ","  ";"  ":"
 
@@ -200,7 +203,10 @@
 //         // console.log("key:", key, " value:", value);     // alternative display format
 //     });
 // }
-// var loopObject = { name:"Tom", email:"teb@gmail.com", cat:"Sebastian"};
+// var loopObject = {
+//     name:"Tom",
+//     email:"teb@gmail.com",
+//     cat:"Sebastian"};
 // eachLoopFunction(loopObject);
 //
 // // ======= while loop =======
@@ -278,3 +284,10 @@
 // ======= ======= ======= REFACTORING ======= ======= =======
 
                     // students work independently
+
+
+// ======= ======= ======= EXERCISE ======= ======= =======
+// ======= ======= ======= EXERCISE ======= ======= =======
+// ======= ======= ======= EXERCISE ======= ======= =======
+
+                    // write javascript that creates roomSelect form

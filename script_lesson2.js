@@ -76,12 +76,14 @@ myCondo.initialize();
 // ======= activateRoomSelect =======
 function activateRoomSelect() {
     console.log("== activateRoomSelect ==");
-    $('#selRoom').change(getSelectedRoom);
+    document.getElementById("selRoom").addEventListener("change", getSelectedRoom);
+    // $('#selRoom').change(getSelectedRoom);
 }
 // ======= activateClearSelection =======
 function activateClearSelection() {
     console.log("== activateClearSelection ==");
-    $('#clearBtn').on('click', clearSelectedRoom);
+    document.getElementById("clearBtn").addEventListener("click", clearSelectedRoom);
+    // $('#clearBtn').on('click', clearSelectedRoom);
 }
 activateRoomSelect();
 activateClearSelection();
@@ -93,6 +95,11 @@ function clearSelectedRoom() {
     $('#roomW').val("");
     $('#roomH').val("");
     $('#selRoom>option:eq(0)').prop('selected', true);
+    $.each(myCondo.rooms, function(roomKey, roomObj) {
+        var nextRoomId = roomObj.id;
+        var nextRoomEl = document.getElementById(nextRoomId);
+        nextRoomEl.style.backgroundColor = "#ddd";
+    });
 }
 
 // ======= getSelectedRoom =======
@@ -105,7 +112,8 @@ function getSelectedRoom() {
         $('#roomN').val(selectedRoomObj.name);
         $('#roomW').val(selectedRoomObj.W / 10);
         $('#roomH').val(selectedRoomObj.H / 10);
-        showSelectedRoom(selectedRoomObj.id)
+        // showRoomData(selectedRoomObj.id);
+        showSelectedRoom(selectedRoomObj.id);
     } else {
         $('#roomN').val("");
         $('#roomW').val("");
@@ -113,17 +121,35 @@ function getSelectedRoom() {
     }
 }
 
+
+// ======= showSelectedRoom =======
+function showSelectedRoom(whichRoom) {
+    console.log("== showSelectedRoom ==");
+    $.each(myCondo.rooms, function(roomKey, roomObj) {
+        var nextRoomId = roomObj.id;
+        var nextRoomEl = document.getElementById(nextRoomId);
+        nextRoomEl.style.backgroundColor = "#ddd";
+    });
+    var roomEl = document.getElementById(whichRoom);
+    roomEl.style.backgroundColor = "thistle";
+}
+
+
 // ======= ======= ======= LOGIC ======= ======= =======
 // ======= ======= ======= LOGIC ======= ======= =======
 // ======= ======= ======= LOGIC ======= ======= =======
 
-function showSelectedRoom(whichRoom) {
-    console.log("== showSelectedRoom ==");
+
+// ======= showRoomData =======
+function showRoomData(whichRoom) {
+    console.log("== showRoomData ==");
     console.log("whichRoom: ", whichRoom);
     console.log("\n if...");
     $.each(myCondo.rooms, function(key, roomObj) {
         nextRoomId = roomObj.id;
         nextRoomName = roomObj.name;
+
+        // ======= if =======
         if (nextRoomId == whichRoom) {
             console.log("nextRoomName: ", nextRoomName);
         }
@@ -132,6 +158,8 @@ function showSelectedRoom(whichRoom) {
     $.each(myCondo.rooms, function(key, roomObj) {
         nextRoomId = roomObj.id;
         nextRoomName = roomObj.name;
+
+        // ======= if...else =======
         if (nextRoomId == whichRoom) {
             console.log("SELECTED: ", nextRoomName);
         } else {
@@ -142,6 +170,8 @@ function showSelectedRoom(whichRoom) {
     $.each(myCondo.rooms, function(key, roomObj) {
         nextRoomId = roomObj.id;
         nextRoomName = roomObj.name;
+
+        // ======= if...else if...else ======= AND: && ======= OR: || =======
         if ((nextRoomId == whichRoom) && (nextRoomId == "bathroom")) {
             console.log("SELECTED: ", nextRoomName);
             console.log("** Eewwww... CLEAN TOILET **");
@@ -152,6 +182,11 @@ function showSelectedRoom(whichRoom) {
         }
     });
 }
+
+
+// ======= ======= ======= SWITCH ======= ======= =======
+// ======= ======= ======= SWITCH ======= ======= =======
+// ======= ======= ======= SWITCH ======= ======= =======
 
 // function switchSelectedRoom(whichRoom) {
 //     console.log("== switchSelectedRoom ==");
@@ -172,6 +207,8 @@ function showSelectedRoom(whichRoom) {
 //             console.log("** default **");
 //     }
 // }
+// switchSelectedRoom("livingRoom");
+
 
 // ======= ======= ======= CONSTRUCTORS & PROTOTYPES ======= ======= =======
 // ======= ======= ======= CONSTRUCTORS & PROTOTYPES ======= ======= =======
