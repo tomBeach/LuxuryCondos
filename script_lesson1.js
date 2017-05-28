@@ -40,13 +40,15 @@
 //     plugins/widgets vs roll-your-own
 //     page mark-up (interaction with DOM)
 //     logical programatic flow (separation of concerns)
-// 
+//
 // // == syntax heads-up
 //     special characters -- ()  []  {}  ","  ";"  ":"
+
 
 // ======= ======= ======= OBJECTS ======= ======= =======
 // ======= ======= ======= OBJECTS ======= ======= =======
 // ======= ======= ======= OBJECTS ======= ======= =======
+
 
 // // == single page app inside single object
 // myCondo = {};               // automatically global scope (global variable)
@@ -61,9 +63,11 @@
 // // == accessing properties (dot syntax)
 // console.log("myCondo.address:", myCondo.address);   // print items inside () to console
 
+
 // ======= ======= ======= PROPERTIES ======= ======= =======
 // ======= ======= ======= PROPERTIES ======= ======= =======
 // ======= ======= ======= PROPERTIES ======= ======= =======
+
 
 // == multiple properties
    // variable types: numbers, string, arrays, other objects
@@ -76,9 +80,11 @@
 // };
 // console.log("myCondo.rooms:", myCondo.rooms);
 
+
 // ======= ======= ======= DEFAULT PROPERTIES ======= ======= =======
 // ======= ======= ======= DEFAULT PROPERTIES ======= ======= =======
 // ======= ======= ======= DEFAULT PROPERTIES ======= ======= =======
+
 
 // == default property benefits/purpose
 //    creates structure for data
@@ -107,9 +113,11 @@
 // console.log("rooms.livingRoom.name:", rooms.livingRoom.name);
 // console.log("rooms.livingRoom.W:", rooms.livingRoom.W);
 
+
 // ======= ======= ======= METHODS ======= ======= =======
 // ======= ======= ======= METHODS ======= ======= =======
 // ======= ======= ======= METHODS ======= ======= =======
+
 
 // // == methods
 // var myCondo = {
@@ -144,22 +152,13 @@
 // myCondo.initialize();
 
 
-
-
-
-
-
-                                    // BREAK BREAK BREAK BREAK BREAK BREAK BREAK
-
-
-
-
-
+                    // BREAK BREAK BREAK BREAK BREAK BREAK BREAK
 
 
 // ======= ======= ======= FUNCTIONS ======= ======= =======
 // ======= ======= ======= FUNCTIONS ======= ======= =======
 // ======= ======= ======= FUNCTIONS ======= ======= =======
+
 
 // // ======= object method =======
 // var myCondo = {
@@ -184,6 +183,7 @@
 // ======= ======= ======= LOOPS ======= ======= =======
 // ======= ======= ======= LOOPS ======= ======= =======
 
+
 // // ======= for loop =======
 // function forLoopFunction(array) {
 //     console.log("== forLoopFunction ==");
@@ -198,11 +198,21 @@
 // // ======= each =======
 // function eachLoopFunction(object) {
 //     console.log("== eachLoopFunction ==");
-//     $.each(object, function(key, value) {               // $ = jquery library ($.each: best way to "loop" thru object)
+//
+//     // ======= jquery =======
+//     $.each(object, function(key, value) {
 //         console.log("key/value:", key, value);          // name and value of each object property
 //         // console.log("key:", key, " value:", value);     // alternative display format
 //     });
+//
+//     // ======= javascript =======
+//     for (var key in object) {
+//         if (object.hasOwnProperty(key)) {
+//             console.log("key/value:", key, object[key]);
+//         }
+//     }
 // }
+//
 // var loopObject = {
 //     name:"Tom",
 //     email:"teb@gmail.com",
@@ -229,6 +239,7 @@
 // ======= ======= ======= MAKE ROOMS ======= ======= =======
 // ======= ======= ======= MAKE ROOMS ======= ======= =======
 // ======= ======= ======= MAKE ROOMS ======= ======= =======
+
 
 // // ======= default rooms collection =======
 // var myRooms = {
@@ -266,17 +277,7 @@
 // ======= ======= ======= MVP ======= ======= =======
 
 
-
-
-
-
-
                     // BREAK BREAK BREAK BREAK BREAK BREAK BREAK
-
-
-
-
-
 
 
 // ======= ======= ======= REFACTORING ======= ======= =======
@@ -290,4 +291,8 @@
 // ======= ======= ======= EXERCISE ======= ======= =======
 // ======= ======= ======= EXERCISE ======= ======= =======
 
+
                     // write javascript that creates roomSelect form
+
+
+// ======= ======= ======= ======= ======= ======= =======
