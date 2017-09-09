@@ -91,12 +91,28 @@ h2 {
     position: relative;
     top:10px;
 }
+#toolTips {
+    position: relative;
+    width: 100px;
+    height: 40px;
+    left: 170px;
+    top: 10px;
+    text-align: center;
+    border: 2px solid purple;
+    background-color: white;
+}
+#toolTips > p {
+    margin: 0;
+    font-size: 22px;
+    line-height: 40px;
+    color: red;
+}
 
 /* ======= forms ======= */
-#roomsForm, #itemsForm, #draggerForm {
-    /*visibility: hidden;*/
+/*#roomsForm, #itemsForm, #draggerForm {
+    visibility: hidden;
     float: left;
-}
+}*/
 
 /* ======= tables ======= */
 #roomsTable, #formTable, th, td {
@@ -107,11 +123,8 @@ h2 {
 
 /* ======= roomsTable ======= */
 #roomsTable {
-    /*visibility: hidden;*/
-    float: right;
     width: 300px;
-    margin: 20px;
-    margin-right: 30px;
+    margin: 10px auto;
 }
 #roomsTableHead {
     background-color: thistle;

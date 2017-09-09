@@ -53,14 +53,14 @@
 // // == single page app inside single object
 // myCondo = {};               // automatically global scope (global variable)
 // var myCondo = {};           // var keyword: scope depends on context (could be local variable)
-//
-// // == properties (key:value pairs, horizontal/vertical syntax)
+
+// == properties (key:value pairs, horizontal/vertical syntax)
 // var myCondo = { address: "1400 U St." };
 // var myCondo = {
 //     address: "1400 U St."
 // };
-//
-// // == accessing properties (dot syntax)
+
+// == accessing properties via dot notation (square bracket notation below)
 // console.log("myCondo.address:", myCondo.address);   // print items inside () to console
 
 
@@ -86,18 +86,18 @@
 // ======= ======= ======= DEFAULT PROPERTIES ======= ======= =======
 
 
-// == default property benefits/purpose
-//    creates structure for data
-//    analogous to seeding a database
-//
-// ======= condo properties =======
-//    property: (e.g. "livingRoom") used for references, element id values
-//    name: (e.g. "Living Room") allows user-friendly display
-//    XYWH: coordinate access to location and size (Xcoordinate, Ycoordinate, width, height)
-//    units: feet (must be converted to pixels for display)
-//
+// // == default property concepts
+// //    defines structure for data
+// //    analogous to seeding a database
+// //    arrays vs objects (index vs dot notation vs square bracket notation)
+// //
+// // ======= condo properties =======
+// //    id: (e.g. "livingRoom") used for references, element id values
+// //    name: (e.g. "Living Room") allows user-friendly display
+// //    XYWH: coordinate access to location and size (Xcoordinate, Ycoordinate, width, height)
+// //    units: feet (must be converted to pixels for display)
+// //
 // ======= default objects =======
-// var condo2B = { name:"Unit 2-B", X:0, Y:0, W:36, H:18 };
 // var rooms = {
 //     livingRoom: { id:"livingRoom", name:"Living Room", X:0, Y:0, W:12, H:18 },
 //     kitchen: { id:"kitchen", name:"Kitchen", X:12, Y:0, W:12, H:12 },
@@ -107,11 +107,16 @@
 // == console.dir: print the entire object to console
 // console.dir(rooms);
 
-// // == dot syntax
+// // == dot notation
 // console.log("rooms:", rooms);
 // console.log("rooms.livingRoom:", rooms.livingRoom);
 // console.log("rooms.livingRoom.name:", rooms.livingRoom.name);
 // console.log("rooms.livingRoom.W:", rooms.livingRoom.W);
+//
+// // == square bracket notation (specifying via variable)
+// console.log("rooms['livingRoom']:", rooms['livingRoom']);
+// var selectedRoom = "livingRoom";
+// console.log("rooms[selectedRoom]:", rooms[selectedRoom]);
 
 
 // ======= ======= ======= METHODS ======= ======= =======
@@ -119,7 +124,7 @@
 // ======= ======= ======= METHODS ======= ======= =======
 
 
-// // == methods
+// == methods
 // var myCondo = {
 //     address: "1400 U St.",
 //     floor: "2",
@@ -129,9 +134,9 @@
 //         console.log("== initialize ==");        // classroom convention: print function name
 //     }
 // };
-//
-// // == calling initialize (ruby Class#new vs javascript)
-// //    http://stackoverflow.com/questions/16245315/does-ruby-call-initialize-method-automatically
+
+// == calling initialize (ruby Class#new vs javascript)
+//    http://stackoverflow.com/questions/16245315/does-ruby-call-initialize-method-automatically
 // myCondo.initialize();
 
 // ======= myCondo =======
@@ -160,7 +165,7 @@
 // ======= ======= ======= FUNCTIONS ======= ======= =======
 
 
-// // ======= object method =======
+// ======= object method =======
 // var myCondo = {
 //     initialize: function(value) {
 //         console.log("== initialize ==");
@@ -169,6 +174,8 @@
 // }
 // var myVariable = "objectMethod";
 // myCondo.initialize(myVariable);
+// console.log("myVariable: ", myVariable);
+// console.log("value: ", value);
 //
 // // ======= printThisValue =======               // class convention: comment function start
 // function printThisValue(value) {
@@ -218,7 +225,7 @@
 //     email:"teb@gmail.com",
 //     cat:"Sebastian"};
 // eachLoopFunction(loopObject);
-//
+
 // // ======= while loop =======
 // function whileLoopFunction(loopLimit) {
 //     console.log("== whileLoopFunction ==");
@@ -241,25 +248,38 @@
 // ======= ======= ======= MAKE ROOMS ======= ======= =======
 
 
-// // ======= default rooms collection =======
-// var myRooms = {
-//     livingRoom: { id:"livingRoom", name:"Living Room", X:0, Y:0, W:12, H:18 },
-//     kitchen: { id:"kitchen", name:"Kitchen", X:12, Y:0, W:12, H:12 },
-//     bathroom: { id:"bathroom", name:"Bathroom", X:12, Y:12, W:12, H:6 },
-//     bedroom: { id:"bedroom", name:"Bedroom", X:24, Y:0, W:12, H:18 }
-// }
-//
-// // ======= myCondo =======
-// var myCondo = {
-//     address: "1400 U St.",
-//     floor: "2",
-//     unit: "2-B",
-//     rooms: myRooms,                                           // add default objects to app object
-//     initialize: function() {
-//         console.log("== initialize ==");
-//     }
-// }
-// myCondo.initialize();
+// ======= default rooms collection =======
+var myRooms = {
+    livingRoom: { id:"livingRoom", name:"Living Room", X:0, Y:0, W:12, H:18 },
+    kitchen: { id:"kitchen", name:"Kitchen", X:12, Y:0, W:12, H:12 },
+    bathroom: { id:"bathroom", name:"Bathroom", X:12, Y:12, W:12, H:6 },
+    bedroom: { id:"bedroom", name:"Bedroom", X:24, Y:0, W:12, H:18 }
+}
+
+// ======= myCondo =======
+var myCondo = {
+    address: "1400 U St.",
+    floor: "2",
+    unit: "2-B",
+    rooms: myRooms,                                           // add default objects to app object
+    initialize: function() {
+        console.log("== initialize ==");
+        myCondo.makeRooms();
+    },
+    makeRooms: function() {
+        console.log("== makeRooms ==");
+        var condoEl = document.getElementById("condo");
+        $.each(myCondo.rooms, function(room, roomObj) {
+            // console.log("room/roomObj:", room, roomObj);
+            var roomEl = document.createElement("div");
+            roomEl.className = "room";
+            roomEl.id = roomObj.id;
+            console.log("roomEl.id:", roomEl.id);
+            condoEl.appendChild(roomEl);
+        });
+    }
+}
+myCondo.initialize();
 
 
 // ======= ======= ======= SIZE ROOMS ======= ======= =======

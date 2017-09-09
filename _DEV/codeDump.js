@@ -1,3 +1,7 @@
+/* livingRoom: */ { id:"livingRoom", name:"Living Room", X:0, Y:0, W:12, H:18 },
+/* kitchen:    */ { id:"kitchen", name:"Kitchen", X:12, Y:0, W:12, H:12 },
+/* bathroom:   */ { id:"bathroom", name:"Bathroom", X:12, Y:12, W:12, H:6 },
+/* bedroom:    */ { id:"bedroom", name:"Bedroom", X:24, Y:0, W:12, H:18 }
 
 
 roomKeys: Object.keys(this.rooms),      // extract object keys for use in id generation
