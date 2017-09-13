@@ -4,7 +4,7 @@
 // ======= ======= ======= INTRO ======= ======= =======
 // ======= ======= ======= INTRO ======= ======= =======
 
-// // == Luxury Condos!!!
+// == Luxury Condos!!!
 //    lesson goals:
 //    • basic object syntax/usage for SPA (single page application)
 //    • document object model (DOM)
@@ -45,10 +45,43 @@
 //     special characters -- ()  []  {}  ","  ";"  ":"
 
 
-// ======= ======= ======= OBJECTS ======= ======= =======
-// ======= ======= ======= OBJECTS ======= ======= =======
-// ======= ======= ======= OBJECTS ======= ======= =======
+// ======= ======= ======= CONSOLE ======= ======= =======
+// ======= ======= ======= CONSOLE ======= ======= =======
+// ======= ======= ======= CONSOLE ======= ======= =======
 
+// x = 2
+// => 2
+// x = "2"
+// => "2"
+// x = 2 + 2
+// => 4
+// x = "2" + "2"
+// => "22"
+// x = "Jon"
+// => "Jon"
+//
+// name = "Jon"
+// name
+// => Jon
+// Jon
+// => ERROR (undefined variable)
+// nameArray = ["Jon", "Joe", "Jim"]
+// => ["Jon", "Joe", "Jim"]
+// nameArray[0]
+// => "Jon"
+// nameArray[1]
+// => "Joe"
+// nameArray[2]
+// => "Jim"
+// myCondo = {}
+// => {}
+// myCondo = { name: "LuxuryLofts" }
+// myCondo.name
+// => "LuxuryLofts"
+
+// ======= ======= ======= OBJECTS ======= ======= =======
+// ======= ======= ======= OBJECTS ======= ======= =======
+// ======= ======= ======= OBJECTS ======= ======= =======
 
 // // == single page app inside single object
 // myCondo = {};               // automatically global scope (global variable)
@@ -68,7 +101,6 @@
 // ======= ======= ======= PROPERTIES ======= ======= =======
 // ======= ======= ======= PROPERTIES ======= ======= =======
 
-
 // == multiple properties
    // variable types: numbers, string, arrays, other objects
    // syntax errors: equals vs colons, commas vs semi-colons
@@ -78,6 +110,8 @@
 //     address: "1400 U St.",                                  // string
 //     rooms: ["livingRoom", "kitchen", "bedroom", "bathroom"] // array
 // };
+// console.log("myCondo:", myCondo);
+// console.log("myCondo.unit:", myCondo.unit);
 // console.log("myCondo.rooms:", myCondo.rooms);
 
 
@@ -96,7 +130,7 @@
 // //    name: (e.g. "Living Room") allows user-friendly display
 // //    XYWH: coordinate access to location and size (Xcoordinate, Ycoordinate, width, height)
 // //    units: feet (must be converted to pixels for display)
-// //
+
 // ======= default objects =======
 // var rooms = {
 //     livingRoom: { id:"livingRoom", name:"Living Room", X:0, Y:0, W:12, H:18 },
@@ -107,15 +141,15 @@
 // == console.dir: print the entire object to console
 // console.dir(rooms);
 
-// // == dot notation
+// == dot notation
 // console.log("rooms:", rooms);
 // console.log("rooms.livingRoom:", rooms.livingRoom);
-// console.log("rooms.livingRoom.name:", rooms.livingRoom.name);
-// console.log("rooms.livingRoom.W:", rooms.livingRoom.W);
-//
-// // == square bracket notation (specifying via variable)
+// console.log("...name:", rooms.livingRoom.name);
+// console.log("...W:", rooms.livingRoom.W);
+
+// == square bracket notation (specifying via variable)
 // console.log("rooms['livingRoom']:", rooms['livingRoom']);
-// var selectedRoom = "livingRoom";
+// var selectedRoom = "bathroom";
 // console.log("rooms[selectedRoom]:", rooms[selectedRoom]);
 
 
@@ -132,12 +166,14 @@
 //     rooms: ["livingRoom", "kitchen", "bedroom", "bathroom"],
 //     initialize: function() {
 //         console.log("== initialize ==");        // classroom convention: print function name
+//     },
+//     makeRooms: function() {
+//         console.log("== makeRooms ==");
 //     }
 // };
-
-// == calling initialize (ruby Class#new vs javascript)
-//    http://stackoverflow.com/questions/16245315/does-ruby-call-initialize-method-automatically
+//
 // myCondo.initialize();
+
 
 // ======= myCondo =======
 // var myCondo = {
@@ -154,7 +190,6 @@
 //         console.log("== makeRooms ==");
 //     }
 // }
-// myCondo.initialize();
 
 
                     // BREAK BREAK BREAK BREAK BREAK BREAK BREAK
@@ -176,13 +211,14 @@
 // myCondo.initialize(myVariable);
 // console.log("myVariable: ", myVariable);
 // console.log("value: ", value);
-//
-// // ======= printThisValue =======               // class convention: comment function start
-// function printThisValue(value) {
-//     console.log("== printThisValue ==");        // class convention: log function name
-//     console.log("value: ", value);              // class convention: label/print arguments and variables
+
+// ======= printThisValue =======               // class convention: comment function start
+// function printThisValue(nextVar) {
+//     console.log("== printThisValue ==");     // class convention: log function name
+//     console.log("nextVar:", nextVar);        // class convention: label/print arguments and variables
 // }
-// var myVariable = "regularFunction";
+//
+// var myVariable = "Joe";
 // printThisValue(myVariable);
 
 
@@ -194,36 +230,33 @@
 // // ======= for loop =======
 // function forLoopFunction(array) {
 //     console.log("== forLoopFunction ==");
-//     for (var i = 0; i < array.length; i++) {
-//         var nextItem = array[i];
-//         console.log("nextItem: ", nextItem);
+//
+//     for (var index = 0; index < array.length; index++) {
+//         console.log("array[index]:", array[index]);
 //     }
 // }
+//
 // var loopArray = ["Joe", "Jon", "Jim", "Jill", "Jane"];
 // forLoopFunction(loopArray);
-//
-// // ======= each =======
+
+// ======= each =======
 // function eachLoopFunction(object) {
 //     console.log("== eachLoopFunction ==");
 //
 //     // ======= jquery =======
 //     $.each(object, function(key, value) {
-//         console.log("key/value:", key, value);          // name and value of each object property
-//         // console.log("key:", key, " value:", value);     // alternative display format
+//         console.log("key:", key, " value:", value);
 //     });
 //
 //     // ======= javascript =======
 //     for (var key in object) {
-//         if (object.hasOwnProperty(key)) {
+//         if (object.hasOwnProperty(key)) {               // excludes "built-in" properties
 //             console.log("key/value:", key, object[key]);
 //         }
 //     }
 // }
 //
-// var loopObject = {
-//     name:"Tom",
-//     email:"teb@gmail.com",
-//     cat:"Sebastian"};
+// var loopObject = { name:"Tom", email:"teb@gmail.com", cat:"Sebastian" };
 // eachLoopFunction(loopObject);
 
 // // ======= while loop =======
@@ -255,13 +288,12 @@ var myRooms = {
     bathroom: { id:"bathroom", name:"Bathroom", X:12, Y:12, W:12, H:6 },
     bedroom: { id:"bedroom", name:"Bedroom", X:24, Y:0, W:12, H:18 }
 }
-
 // ======= myCondo =======
 var myCondo = {
     address: "1400 U St.",
     floor: "2",
     unit: "2-B",
-    rooms: myRooms,                                           // add default objects to app object
+    rooms: myRooms,                 // add default objects to app object
     initialize: function() {
         console.log("== initialize ==");
         myCondo.makeRooms();
@@ -269,8 +301,9 @@ var myCondo = {
     makeRooms: function() {
         console.log("== makeRooms ==");
         var condoEl = document.getElementById("condo");
+        console.log("condoEl:", condoEl);
         $.each(myCondo.rooms, function(room, roomObj) {
-            // console.log("room/roomObj:", room, roomObj);
+            console.log("room/roomObj:", room, roomObj);
             var roomEl = document.createElement("div");
             roomEl.className = "room";
             roomEl.id = roomObj.id;
@@ -278,6 +311,8 @@ var myCondo = {
             condoEl.appendChild(roomEl);
         });
     }
+
+
 }
 myCondo.initialize();
 

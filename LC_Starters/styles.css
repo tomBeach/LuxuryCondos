@@ -1,0 +1,194 @@
+/* ======= general ======= */
+body {
+    /* Specify that <div> elements should have padding and border included in the element's total width and height */
+    box-sizing: border-box;
+    font-family: "Ariel", sans-serif;
+}
+
+/* ======= center ======= */
+#page-wrap {
+     width: 700px;
+     margin: 0 auto;
+     background-color: #eee;
+     overflow-x: auto;
+}
+
+/* ======= containers ======= */
+#header, #footer, #content {
+    width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: ghostwhite;
+}
+#content {
+    height: 320px;
+    padding: 20px 10px;
+}
+#footer {
+    height: 140px;
+}
+h2 {
+    margin: 10px;
+}
+
+/* ======= condo ======= */
+#condo {
+    position: relative;
+    margin: 20px auto;
+    width: 360px;
+    height: 180px;
+    background-color: #eee;
+}
+
+/* ======= condo elements ======= */
+.room {
+    position: relative;
+    float: left;
+    width: 60px;
+    height: 60px;
+    background-color: #ddd;
+    border: solid 4px brown;
+}
+.room-label {
+    margin: 5px;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: red;
+}
+.size-label {
+    float: left;
+    margin: 0 10px;
+    font-size: 10px;
+    color: blue;
+}
+
+/* ======= scale bars ======= */
+#heightBar {
+    visibility: visible;
+    position: relative;
+    float: left;
+    margin-top: 20px;
+    margin-left: 140px;
+    width: 4px;
+    height: 184px;
+    background-color: blue;
+}
+#widthBar {
+    visibility: visible;
+    position: relative;
+    width: 372px;
+    height: 4px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: blue;
+}
+#heightBar > p {
+    position: relative;
+    top: 40%;
+    left: -25px;
+}
+#widthBar > p {
+    position: relative;
+    top:10px;
+}
+#toolTips {
+    position: relative;
+    width: 100px;
+    height: 40px;
+    left: 170px;
+    top: 10px;
+    text-align: center;
+    border: 2px solid purple;
+    background-color: white;
+}
+#toolTips > p {
+    margin: 0;
+    font-size: 22px;
+    line-height: 40px;
+    color: red;
+}
+
+/* ======= forms ======= */
+/*#roomsForm, #itemsForm, #draggerForm {
+    visibility: hidden;
+    float: left;
+}*/
+
+/* ======= tables ======= */
+#roomsTable, #formTable, th, td {
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+/* ======= roomsTable ======= */
+#roomsTable {
+    width: 300px;
+    margin: 10px auto;
+}
+#roomsTableHead {
+    background-color: thistle;
+}
+#roomsTable, th, td {
+    height: 20px;
+    font-size: 12px;
+    background-color: #eee;
+}
+#roomsTable, td {
+    height: 32px;
+}
+.w30 {
+    width: 30%;
+}
+.w20 {
+    width: 20%;
+}
+#clearRow > button {
+    float: left;
+    margin-left: 20px;
+}
+.dataText {
+    width: 80%;
+}
+.roomData {
+    width: 30%;
+}
+#width {
+    width: 20px;
+}
+#height {
+    width: 20px;
+}
+select, button {
+    height: 20px;
+}
+
+
+#formTable {
+    float: left;
+    width: 300px;
+    margin: 10px;
+}
+#formN, #formV {
+    width: 100px;
+}
+#formW, #formH {
+    width: 40px;
+}
+#roomInputs {
+    height: 40px;
+}
+
+/* ======= draggers ======= */
+.chair {
+    border-radius: 10px 10px 4px 4px;
+    border: 2px solid purple;
+    background-color: thistle;
+    box-shadow: 2px 2px 2px #555;
+}
+.couch {
+    border-radius: 10px 10px 4px 4px;
+    border: 2px solid indianred;
+    background-color: darksalmon;
+    box-shadow: 2px 2px 2px #555;
+}
